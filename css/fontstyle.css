@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Stick&display=swap');
+
+/*Local Font Intergrate*/
+/*1) Local Machine Integrate*/
+/*2) Project Folder Integrate*/
+
+/*1) Local Machine Integrate*/
+
+/*.p1{
+	font-family: Arial,Century.'Times New Roman';
+}
+
+.p2{
+	font-family: Century;
+}*/
+
+/*body{
+	font-family: Arial,Century.'Times New Roman';
+}*/
+
+
+/*2) Project Folder Integrate*/ 
+
+@font-face{
+	font-family: 'Stick';
+	src: local('Stick-Regular'), url(../libs/fonts/stick/Stick-Regular.ttf) format('woff');
+}
+
+@font-face{
+	font-family: abc;
+	src: local(AkayaTelivigala-Regular),url(../libs/fonts/akayatelivigala/AkayaTelivigala-Regular.ttf) format('woff');
+}
+
+.p1{
+	font-family: Stick;
+}
+
+.p2{
+	font-family: abc;
+}
+
+/*body{
+	font-family: abc;
+}
+*/
+
+.p3{
+	font-family: Arial, Century;
+
+			/*100 - 900*/
+	font-weight: 900;
+	/*font-weight: bold;*/
+
+	font-style: italic;
+
+	/*text-transform: uppercase;*/
+	/*text-transform: lowercase;*/
+	/*text-transform: capitalize;*/
+
+	/*font-variant: small-caps;*/
+
+/*Text Indentation*/
+	text-indent: 30px; /*tab key=50px*/
+
+}
+
+
+/*Global Font Integrate*/
+/*.p1{
+	font-family: 'Stick', sans-serif;
+}
+*/
+/*.p2{
+	font-family: 'Akaya Kanadaka', cursive;
+}*/
+
+.a1{
+	text-decoration: none;
+	/*color: red;*/
+}
+
+.a1:visited{
+	color: #ff0;
+}
+
+.a1:hover{
+	color: pink;
+	font-size: 20px;
+	border: 2px solid green;
+}
+
+.menutext{
+	font-family: Cambria;
+	text-decoration: none;
+	background-color: green;
+	color: #fff;
+
+	/*padding: 10px;*/
+
+	 /*top&bottom  left&right*/
+	/*padding: 10px 30px;*/
+
+	/*padding: 10px 20px 30px 40px;*/
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+
+	border-radius: 10px;
+
+	/*transition: background-color 1s, color 1s;*/
+	transition: all 2s;
+}
+
+.menutext:hover{
+	background-color: orange;
+	color: #000;
+}
+
+.imgdesign{
+	width: 80px;
+	height: 80px;
+}
+
+.imgdesign:hover{
+	width: 100px;
+	height: 100px;
+}
+

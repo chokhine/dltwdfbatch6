@@ -1,0 +1,44 @@
+/*Selectors*/
+/*Element Selectors*/
+/*ID Selector*/
+/*Group element Selectors(,)*/
+
+/*Single Selector*/
+h1{
+	color:blue;
+}
+
+/*Group Selector*/
+h2,h3,h4{
+	color:green;
+}
+
+/*ID Selector*/
+/*#self{
+	color: yellowgreen;
+}
+
+#sakasa{
+	color: red;
+}*/
+
+/*ID group selectors*/
+#self,#sakasa,span{
+	color: red;
+}
+
+/*Class selector*/
+
+.ph{
+	color: blueviolet;
+	;
+}
+.f30{
+	font-size: 30px;
+}
+
+.asd{
+	color: rosybrown;
+	font-size: 40px;
+}
+

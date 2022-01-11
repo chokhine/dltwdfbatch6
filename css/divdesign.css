@@ -1,0 +1,104 @@
+.firsdiv{
+
+	width:200px;
+	height:100px;
+	/*background-color:yellow;*/
+	/*background-color:#42b1c2;*/
+	/*background-color:rgba(238,165,184,1.00);*/ /*(red,green,blue,alpha)*/
+	
+	/*background:red;*/
+	/*background:#42b5c2;*/
+	background:rgba(237,198,194,1.00);
+
+
+
+	color:deeppink;
+	font-size:20px;
+
+}
+
+.seconddiv{
+	width:500px;
+	height:500px;
+
+	/*background-image:url("../img/cover/bg1.jpg");*/
+	background:url("../img/cover/bg1.jpg");
+
+	/*background-repeat:no-repeat;*/
+	/*background-repeat:repeat;*/ /*(it is not necessary)*/
+	/*background-repeat:repeat-x;*/
+	background-repeat:repeat-y;
+
+	background-position:center;
+
+	/*border:2px;
+	border-style:solid;
+	border-color:seagreen;*/
+
+	/*Short Hand*/
+		  /*s    s    c*/
+	border:5px solid green;
+
+	color:red;
+}
+
+.divthree{
+	width:300px;
+	height:300px;
+	border:3px solid red;
+
+	color:#fff;
+	/*background:linear-gradient(skyblue,white,yellow,red);*/
+	/*background-image:linear-gradient(white,blue,yellow,green);*/
+	/*background:linear-gradient(#4287f5,#4397c5,#128785);*/
+	/*background:linear-gradient(rgba(127,127,127,1.00),rgba(223,193,127,1.00),rgba(112,183,127,1.00));*/
+
+	/*background:linear-gradient(
+		10deg,
+		red,
+		orange,
+		green
+		);*/
+
+	/*background:radial-gradient(red,yellow,blue);*/
+	/*background:radial-gradient(#4257f5,#6297b5,#6087c5);*/
+	/*background:radial-gradient(rgba(112,183,127,1.00),rgba(88,104,127,1.00),rgba(230,203,127,1.00));*/
+
+	/*background:linear-gradient(45deg,rgba(171,218,727,1.00),rgba(501,209,827,0.00)), url("../img/cover/bg2.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;*/
+
+	/*background:linear-gradient(
+		
+		red 70%,
+		orange 80%
+
+		);*/
+
+	background:linear-gradient(
+		
+		red 30%,
+		orange 0% 70%, 
+		blue 0%
+		);
+
+}
+
+.divfour{
+	width:200px;
+	height:300px;
+	
+	color:white;
+
+	background:linear-gradient(45deg,rgba(401,818,427,1.00),rgba(501,209,827,0.00)), url("../img/cover/bg2.jpg");
+	background-repeat:no-repeat;
+}
+
+
+
+/*single parameter function
+name(parameter)
+
+multi parameter function
+name(parameter,parameter)*/

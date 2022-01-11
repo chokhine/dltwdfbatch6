@@ -1,0 +1,29 @@
+.textalign{
+	/*text-align:center;*/
+	/*text-align:right;*/
+	/*text-align:left;*/
+
+	text-align:justify;
+	}
+
+	.textdecoration{
+		/*text-decoration:underline;*/
+		/*text-decoration:line-through;*/
+		text-decoration:overline;
+	}
+
+	.textline{
+		/*letter-spacing: 3px;*/
+
+		/*line-height:40px;*/	
+		  /*line-height:3;*/
+		  line-height:200%;			
+	}
+
+	.textshadow{
+				     /*hoz vel bul col*/
+		/*text-shadow: -5px -5px 10px hotpink;*/
+
+		text-shadow: 10px -5px 5px #4e32a8;
+	}
+

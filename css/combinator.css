@@ -1,0 +1,94 @@
+/*-1-Tag to tag--*/
+
+/*div span{
+	color: hotpink;
+}*/
+
+/*-2-Tags to tag--*/
+
+/*div span p{
+	color: greenyellow;
+}*/
+
+/*-3-tag to Class--*/
+
+/*div .address{
+	color: orangered;
+}*/
+
+/*-4-Multi Tags to Class--*/
+
+/*div span .name{
+	color: red;
+}
+*/
+
+/*-5-Multi Tags to Same Class--*/
+
+/*div span small.name{
+	color: yellow;
+}*/
+
+/*-6-Multi Class to Class--*/
+
+/*.bank .money .currency{
+	color: seagreen
+	;
+}*/
+
+/*-7-Tag to Multi Calss--*/
+/*div .name .age{
+	color: goldenrod;
+}*/
+
+/*-8-Class to Tag--*/
+/*.container p{
+	color: pink;
+}*/
+
+/*-9-Class to MUlti Tags--*/
+
+/*.container b span{
+	color: green;
+}
+*/
+
+/*-10-Same Class--*/
+/*.mobile.jpn {
+	color: yellow;
+}
+
+.mobile.cn{
+	color: orange;
+}
+
+.mobile.us{
+	color: sienna;
+}*/
+
+/*-11-Class to Same Class--*/
+/*.vehicle .car.jpn{
+	color: yellow;
+}*/
+
+/*-12-Class to Tag by group selector--*/
+/*.div1 p,.div1 b{
+	color: orangered;
+}*/
+
+/*-13-Child Selector-( > )-*/
+/*.div2 > p{
+	color: hotpink;
+}*/
+
+/*-14-Sibling Selector (2 types)--*/
+
+/*(1) General Sibling Selector(~)*/
+/*.div4 > p {
+	color: brown;
+}*/
+
+/*(2) Adjecent Sibling Selector(+)*/
+.div7 + b, .div9 + b{
+	color: violet;
+}

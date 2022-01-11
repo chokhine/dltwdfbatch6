@@ -1,0 +1,179 @@
+body{
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top{
+	height: 100px;
+	background-image: url('./img/download.jpg');
+	background-position: center;
+
+}
+
+.top h1{
+	font-size: 35px;
+	font-weight: 800;
+	color: #fff;
+
+	text-shadow: 0px 0px 10px black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.top p{
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 0px 0px 10px black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transform: translateY(-10px);
+}
+
+.middle{
+	width: 100%;
+	height: 100%;
+
+	/*background-color: hotpink;*/
+
+	position: relative;
+	padding-bottom: 5px;
+}
+
+.middle .menu{
+	width: 19%;
+	height: 100%;	
+}
+
+.menu a{
+	width: 100%;
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	background: green;
+
+	border: 1px solid green;
+	border-radius: 0 50px 50px 0;
+
+	display: block;
+
+	padding: 5px 0;
+	margin-bottom: 10px;
+}
+
+.div0{
+	background-color: green;
+
+	position: relative;
+
+}
+
+.div0 label{
+	font-size: 16px;
+	border: 1px solid #333;
+	padding: 0 10px 1px 10px;
+	background-color: #f4f4f4;
+
+	position: absolute;
+	left: 71%;
+	top: 0;
+}
+
+.div0 label,
+.div0 input{
+	margin-top: 5px;
+	margin-left: 3px;
+}
+
+.div0 p{
+	font-size: 15px;
+	text-align: center;
+
+	padding-bottom: 15px;
+}
+
+.middle .content{
+	width: 81%;
+	/*background-color: lightblue;*/
+
+	position: absolute;
+	left: 19%;
+	top: 0;
+}
+
+.ID{
+	margin-left: 10px;
+}
+
+.user{
+
+	display: flex;
+	justify-content: space-evenly;	
+
+	margin-bottom: 40px;
+
+}
+
+.div1,
+.div2,
+.div3,
+.div4{
+	width: 19%;
+	height: 200px;
+	background-color: orange;
+
+	padding: 5px;
+	border-radius: 50px 0;
+
+
+}
+
+.div1 img,
+.div2 img,
+.div3 img,
+.div4 img{
+	width: 40%;
+
+	border-radius: 50% 50%;
+
+	transform: translateX(75%);
+}
+
+.div1 p,
+.div2 p,
+.div3 p,
+.div4 p{
+	font-size: 17px;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+
+.footer{
+
+	width: 100%;
+	height: 110px;
+	background-image: url("./img/footer.jpg");
+	background-position: center;
+
+}
+
+.footer p{
+	width: 75%;
+	height: 50px;
+	font-size: 17px;
+	text-transform: capitalize;
+	text-align: justify;
+
+	transform: translate(290px,-70px);
+}
+hr{
+	width: 75%;
+	transform: translate(125px,-70px);
+}

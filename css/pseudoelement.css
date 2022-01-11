@@ -1,0 +1,22 @@
+.paragraph::first-line{
+	color: blue;
+	font-size: 40px;
+}
+
+/*.paragraph::before{
+	content: "ABC ";
+}*/
+
+.paragraph::after{
+	content: "ASDF";
+}
+
+.paragraph::first-letter{
+	color: magenta;
+	font-size: 60px;
+}
+
+.paragraph::selection{
+	background-color: orange;
+	color: #fff;
+}
