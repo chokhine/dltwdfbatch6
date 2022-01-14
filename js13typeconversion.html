@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Type Conversion</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let val;
+
+			// string
+			val = 'aung aung';
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+
+			// Number to string
+
+			val = '20';
+			val = "20";
+			val = `20`;
+
+			val = '20+20'; //result 20+20
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+
+			val1 = '20';
+			val2 = '20';
+			val = val1 + val2;
+			console.log(val);
+
+			val = String(20+20);
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+
+			// Bool to String
+			val = true;
+			val = String(val);
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+
+			// Date to String
+			val = new Date();
+			val = String(new Date());
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+
+			// Array to String
+			val = '[1,2,3,4,5]'; //result = [1,2,3,4,4]
+			val = String([1,2,3,4,5]); //result = 1,2,3,4,5
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+
+			// _______________________________________
+
+			// String to Number
+
+			// val = prompt('Enter Number');
+			// console.log(val);
+			// console.log(typeof val);
+			// console.log(val.length);
+
+			// val = Number(prompt('Enter Number'));
+			// console.log(val);
+			// console.log(typeof val);
+			// console.log(val.length);
+
+			val = '20';
+			// val = Number(val);
+			val = +val; 
+			// val = +"aung aung"; // Nan = not a Number
+			// val = Number('aung aung'); // Nan = not a Number
+			val = Number([1,2,3,4,5]); // Nan = not a Number
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+			console.log(val.toFixed(5));//Numberဖြစ်တဲ့ အခါ
+        	//toFixedကိုသုံးလို့ရတယ် ဒသမကိန်းနဲ့ထုတ်ပေးတယ်
+
+        	val = 123.4589;
+        	console.log(val);
+        	console.log(val.toFixed(2)); // ဒသမကိန်း၄ခုရှိတာကို နှစ်နေရာဘဲ ယူမယ်ဆိုတော့ ၁တိုးပြီး၄၆ဖြစ်သွားတယ်
+
+        	val = '50.897';
+        	val = parseFloat(val);
+        	// val = parseInt(val);
+        	console.log(val);
+        	console.log(typeof val);
+        	console.log(val.length);
+        	console.log(val.toFixed(2));// parseInt လဲ Number ပြောင်းတာဘဲ သူက ဒသမကိန်းတွေ တိုးပေးပြီးယူတာ
+
+        	//Boolean to Number
+
+	        val = true;
+	        console.log(val);
+	        console.log(typeof val);
+	        console.log(val.length);
+
+	        //___________________________
+
+	        // To Array
+
+	        val = "aung tun tun";
+	        val = Array.from(val);
+	        console.log(Array.isArray(val));
+	        console.log(val);
+	        console.log(typeof val);
+	        console.log(val.length);
+
+	        //can't Convert
+
+	        // val = Array.from(20);
+	        // val = Array.from(true);
+	        val = {
+			music :"rock",
+			sport : "basketball"
+			};
+
+	        console.log(Array.from(val));
+			console.log(val);
+			console.log(typeof val);
+			console.log(val.length);
+		</script>
+	</body>
+</html>
