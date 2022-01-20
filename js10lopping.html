@@ -7,8 +7,8 @@
 		<script type="text/javascript">
 			
 			let obj = {
-				name:'aung aung';
-				age:30;
+				name:'aung aung',
+				age:30
 			};
 
 			console.log(obj);
@@ -24,10 +24,73 @@
 			// 1. For Loop
 
 					// start   end    in/de
-			for (statement1;statement2;statement3){
-				code to exexuted;
-			}
+			// for (statement1;statement2;statement3){
+			// 	code to exexuted;
+			// }
 
+			let i= 0; //let ka for scope ka hr so yin global scope mhr call use lop ma ya buu
+			for(i; i<10; i++){
+				console.log(i);
+			}
+			console.log('this is i value from outside = ' +i);
+
+			// for(var j = 5; j<10;j++){
+			// 	console.log('j value is = ' + j);
+			// }
+			// console.log(j); // var la global scope mhr kaw call use lop ya tl
+
+			/*let name = 'mg mg';
+			name = 'kyaw kyaw';
+			let name = 'tun tun'; // ma ya buu 'let' ka 2 khr declare lop lo ma ya buu
+			console.log(name);*/
+
+			/*var name = 'su su';
+			name = 'ma ma';
+			var = 'aye aye'// 'var' ka 2 khr declare lop lo ya tl
+			console.log(name);*/
+
+			/*for(let j =0;j<=10;j++){
+				if(j === 2){
+					console.log('2 is my favourite number');
+				}else if(j === 5){
+					console.log('5 is my favourite number');
+				}
+				console.log(j);
+			}*/
+
+			/*for (var j = 0; j<10;j++){
+				if(j ===2){
+					console.log(j + 'is my fav number');
+					break; //break the all system
+				}
+				console.log(j);
+			}
+			console.log('this is j value from outside =' + j);*/
+
+			/*for(let j = 0;j<10;j++){
+				if(j === 2){
+					console.log(j + ' is my fav number');
+					continue; // continue to the system
+				}
+				console.log(j);
+			}*/
+
+			/*for(let j = 0;j<10;j++){
+				if(j === 2){
+					console.log(j + ' is my fav number');
+					continue; // continue to the system
+				}
+				if(j === 5){
+					console.log(j + ' is my fav number');
+					break; // break this the system
+				}
+				console.log(j);
+			}*/
+
+			for(var k =10; k>0; k--){
+				console.log(k);
+			}
+			console.log(k + ' outside value');
 
 
 		</script>
