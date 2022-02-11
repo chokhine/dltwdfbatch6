@@ -87,11 +87,335 @@
 				console.log(j);
 			}*/
 
-			for(var k =10; k>0; k--){
-				console.log(k);
-			}
-			console.log(k + ' outside value');
+			// for(var k =10; k>0; k--){
+			// 	console.log(k);
+			// }
+			// console.log(k + ' outside value');
 
+			// document.write('<h3>For Loop</h3>');
+
+			// let myarrs = ['red','green','black','orange','gray','blue'];
+
+			// for(let j=0; j<=5; j++){
+			// 	console.log(j);
+			// 	console.log(myarrs[j]);
+			// }
+
+			// for(let j=0; j<myarrs.length; j++){
+			// 	// console.log(j);
+			// 	// console.log(myarrs[j]);
+			// 	document.write(myarrs[j] + '<br/>');
+			// }
+
+			const peoples = [
+			{name:'Aung Aung',age:20},
+			{name:'Su Su',age:30},
+			{name:'Hla Hla',age:40}
+			]
+
+			for (let j=0;j<peoples.length;j++){
+				console.log(j);
+				document.write('Name = '+peoples[j].name+ " \/ age = "+peoples[j].age +'<br/>');
+			}
+			document.write('<hr/>');
+
+			// ------------------------------------------------------
+
+			// 2. For In Loop
+
+				/*for(key in object){
+					code to executed;
+				}*/
+
+				document.write('<h3>For In Loop</h3>');
+
+				let students = {
+					name : 'Aung Aung',
+					city : 'Mandalay',
+					parent: 'U Ba',
+				}
+				// console.log(students);
+				// console.log(students.city);
+
+				for(key in students){
+					// console.log(key);
+					// console.log(students);
+					// console.log(students.name);
+
+					console.log(students[key]);
+
+					document.write(key + ' = '+students[key]+'<br/>')
+				}
+
+				const ourteams = ['kyaw kyaw','aung aung','mg mg','Tun Tun'];
+
+				console.log(ourteams);
+				console.log(ourteams[3]);
+
+				for(idx in ourteams){
+					console.log(key);
+					document.write('our team = '+ ourteams[idx]+ '<br/>');
+				}
+
+				let hays = 'Hay January';
+
+				for(idx in hays){
+					console.log(idx);
+					document.write( hays[idx]+ '<br/>');
+
+				}
+
+				document.write('<hr/>');
+				// ------------------------------------------------------
+
+				// 3. For Of Loop
+
+				// for(value of arrays){
+				// 	code to be executed;
+				// }
+				document.write('<h3>For In Loop</h3>');
+
+				const members = ['su su','hla hla','aye aye','nu nu'];
+				// console.log(members);
+				// console.log(members[2]);
+
+				for (member of members){
+						console.log(member);
+						document.write('Member = ' +member + '<br/>');
+				}
+
+				let greeting = 'Hello January';
+				for(value of greeting){
+					document.write(value + '<br/>');
+				}
+				document.write('<hr/>');
+
+				// ------------------------------------------------------
+				// 4. While loop
+
+				/*start
+
+				while(condition){
+
+					// before inc /dec
+					code to exexcuted;
+					// after inc / dec
+				}*/
+
+				/*let b = 0;
+				while(b < 10){
+					console.log('Number b value is = ' + b);
+					b++;
+				}
+				console.log('outside b value is = ' + b);*/
+
+				let b = 9;
+				while(b < 10){
+					b++;
+					console.log('Number b value is = ' + b);
+					
+				}
+				console.log('outside b value is = ' + b);
+
+				let c = 0;
+			while(c < 10){
+				c++;
+				console.log("Number c value is = " + c);
+			}
+
+			console.log("outside c value = " + c);
+			document.write('<h3>White Loop</h3>');
+
+			let mycolors = ['red','green','black','gray','blue','pink'];
+			console.log(mycolors);
+
+
+			let k = 0;
+			while (k<mycolors.length){
+				console.log(k);
+				document.write(mycolors[k]+'<br>');
+				k++;
+			}
+
+			let laptops = [
+			{
+				cpu:'core i7',
+				ram:'8gb',
+				hdd:'1tb'
+			}
+			];
+			console.log(laptops[0].cpu);
+			let q = 0;
+			while(q<laptops.length){
+				console.log(q);
+
+				document.write('cpu is = '+laptops[q].cpu+'<br/>'+'ram is = '+laptops[q].ram+'<br/>'+'hdd is = '+laptops[q].hdd+'<br/>');
+				q++;
+			}
+			document.write('<hr/>');
+// ------------------------------------------------------
+// 5. Do While loop
+
+		// start
+
+		// do{
+		// before print inc/dec
+		// code to executed
+		// after print inc/dec
+		// }while(condition);
+
+		document.write('<h3>Do While Loop</h3>')
+		let m = 0;
+		do{
+			console.log('M result is = ' + m);
+			m++;
+		}while(m<10);
+		console.log('M outside is = ' + m);
+
+		let n = 0;
+
+		do{
+			n++;
+			console.log('N result is = '+n);
+		}while(n<10);
+		console.log("n outside value =" + n );
+
+
+
+		let colors = ['red','green','black','gray','blue','pink'];
+			// console.log(mycolors);
+
+		let l = 0;
+
+		do{
+			document.write(colors[l]+'<br/>');
+			l++;
+		}while(l<colors.length);
+		document.write('<hr/>');
+
+		// -------------------------------------------------
+		// 6.forEach
+
+		document.write('<h3>ForEach Loop</h3>');
+
+
+		// mainarrs.forEach(function(value,index,array){
+		// 	code to excuted
+		// });
+
+
+		// colors.forEach(function(color){
+		// 	console.log(color);
+		// });
+
+		// colors.forEach(function(color,idx,array){
+		// 	console.log('index key is = '+idx+" Colors is "+color);
+		// 	console.log(array);
+		// });
+
+		let persons = ['aung aung','maung maung','kyaw kyaw','zaw zaw','maw maw'];
+
+			// Regular Function
+
+			persons.forEach(function(person){
+				document.write(person+"<br/>");
+			});
+
+			document.write("<br/>");
+
+			// Arrow Function
+
+			persons.forEach((abc)=>{
+				document.write(abc+"<br/>");
+			});
+
+			document.write('<hr/>');
+
+			// -------------------------------------------------
+			// 7. Map
+
+			document.write('<h3>Map</h3>');
+
+			const visitors =['paing sis','m zaw naw','june','htet aung kyaw'];
+
+			visitors.forEach(function(visitor){
+				// console.log(visitor);
+				console.log(`forEach result = Mr.${visitor}`);
+			});
+
+			visitors.map(function(visitor){
+				// console.log(visitor);
+				console.log(`map result = Mr.${visitor}`);
+			});
+
+			let myguys = visitors.forEach(function(visitor){
+				return visitor;
+			});
+			console.log(myguys); //undefined
+
+			// let guys = visitors.map(function(visitor){
+			// 	return `Mr.${visitor}`;
+			// });
+
+							       
+			// let guys = visitors.map((visitor)=>{
+			// 	return `Mr.${visitor}`;
+			// });
+
+							         // prantacy 1 khu ae twae
+			// let guys = visitors.map(visitor=>{
+			// 	return `Mr.${visitor}`;
+			// });
+
+							         // prantacy 1 khu ae twae
+			let guys = visitors.map(visitor=>`Mr.${visitor}`);
+
+			console.log(guys);
+			console.log(typeof guys); //(object) array
+
+
+			const users = [
+			{id:1,name:"Aung Aung"},
+			{id:2,name:"Su Su"},
+			{id:3,name:"Mya Mya"},
+			];
+
+			console.log(users[1].name);
+
+			const getname = users.map(function(user){
+				return user.name;
+			});
+			console.log(getname);
+
+			const printname = users.map(user=> user.name);
+			console.log(printname);
+
+			users.map((user,idx)=>{
+				document.write(`Index is ${idx} = ID is ${user.id} and name is ${user.name}` +"<br/>");
+			});
+
+			const game = 'Chess';
+			const winners = ['Mr.Tin','Mr.June','Ms.July'];
+
+			const getresult = winners.map((winner,idx)=>({name:winner,sport:game,price:idx+1}));
+			console.log(getresult);
+
+			// ---------------------------------------------
+
+			// 8.Filter
+
+			document.write('<h3>Filter</h3>');
+
+			const ages = [20,25,17,35,21,16,14,40,36,18,32,52,12];
+
+			// const getov18 = ages.filter(age=>{
+			// 	return age >18;
+			// });
+
+			const getov18 = ages.filter(age=>age===18);
+			
+			console.log(getov18);
+			console.log(typeof getov18);
 
 		</script>
 	</body>

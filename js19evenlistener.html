@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Event Listener</title>
+</head>
+<body>
+
+	<div>
+		<h3>Show Hide Button</h3>
+
+		<div id="paragraph">
+			<p id="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<!-- <button type="button" id="hideme" class="" onclick="hideme()">Hide Me</button> -->
+
+		<button type="button" id="hideme" class="">Hide Me</button>
+
+		<hr/>
+
+		<div>
+			<p id = 'mm'> We Love Myanmar</p>
+			<button type="button" id="red" class="">Red</button>
+
+			<button type="button" id="green" class="">Green</button>
+
+			<button type="button" id="blue" class="">Blue</button>
+
+			<button type="button" id="orange" class="">Orange</button>
+
+			<button type="button" id="bold" class="">Bold Text</button>
+
+			<button type="button" id="italic" class="">Italic Text</button>
+
+			<button type="button" id="underline" class="">Underline Text</button>
+
+
+		</div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+		let pgh = document.getElementById('paragraph');
+		let hidemebtn = document.getElementById('hideme');
+		
+		function hideme(){
+			// console.log('ki');
+			// console.log(pgh);
+
+			// pgh.style.display = 'none';
+			// hidemebtn.innerText='Show Me';
+
+			// if(pgh.style.display === 'none'){
+			// 	pgh.style.display = 'block';
+			// 	hidemebtn.innerText='Hide Me';
+			// }else{
+			// 	pgh.style.display = 'none';
+			// 	hidemebtn.innerText='Show Me';
+			// }
+
+
+		}
+
+		hidemebtn.addEventListener('click',function(){
+			// console.log('lili');
+
+			if(pgh.style.display === 'none'){
+				pgh.style.display = 'block';
+				hidemebtn.innerText='Hide Me';
+			}else{
+				pgh.style.display = 'none';
+				hidemebtn.innerText='Show Me';
+			}
+		});
+
+		document.getElementById('red').addEventListener('click',function(){
+			document.getElementById('mm').style.color='red';
+		});
+
+		document.getElementById('green').addEventListener('click',function(){
+			document.getElementById('mm').style.color='green';
+		});
+
+		document.getElementById('blue').addEventListener('click',function(){
+			document.getElementById('mm').style.color='blue';
+		});
+
+		document.getElementById('orange').addEventListener('click',function(){
+			document.getElementById('mm').style.color='orange';
+		});
+
+		document.getElementById('bold').addEventListener('click',function(){
+			document.getElementById('mm').style.fontWeight='bold';
+		});
+
+		document.getElementById('italic').addEventListener('click',function(){
+			document.getElementById('mm').style.fontStyle='italic';
+		});
+
+		document.getElementById('underline').addEventListener('click',function(){
+			document.getElementById('mm').style.textDecoration='underline';
+		});
+		
+	</script>
+</body>
+</html>

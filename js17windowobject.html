@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Window Object</title>
+	<style type="text/css">
+		@media print{
+			*{
+			visibility: hidden;
+			}
+			#printarea *{
+			visibility: visible;
+			}
+		}
+
+		@page{
+			/*size: portrait;*/
+			/*size: landscape;*/
+			size: auto;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="printme()">print</button>
+	<button onclick="reloadme()">refresh</button>
+	<hr/>
+
+	<div id="printarea">
+		<div>
+		<h1>This is paragraph 1</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt metus magna, malesuada elementum nisi fringilla a. Proin erat sapien, pretium at ipsum non, tincidunt cursus erat. Nam quis bibendum sapien, eget mollis turpis. Etiam ac sapien imperdiet, molestie justo sit amet, pharetra ligula. Fusce dignissim varius velit, sit amet congue nibh rutrum sed. Pellentesque et massa quam. Mauris viverra quis quam ullamcorper vehicula. Quisque lacinia nunc sed enim eleifend posuere. Sed tempor vestibulum enim, tincidunt tristique ante. Suspendisse suscipit nisl a metus molestie, ac blandit erat tempor. Nullam quis metus massa. Fusce vitae iaculis eros. In sed diam erat. Curabitur velit leo, pulvinar eget lacinia a, elementum quis risus.</p>
+		</div>
+
+		<div>
+		<h1>This is paragraph 2</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt metus magna, malesuada elementum nisi fringilla a. Proin erat sapien, pretium at ipsum non, tincidunt cursus erat. Nam quis bibendum sapien, eget mollis turpis. Etiam ac sapien imperdiet, molestie justo sit amet, pharetra ligula. Fusce dignissim varius velit, sit amet congue nibh rutrum sed. Pellentesque et massa quam. Mauris viverra quis quam ullamcorper vehicula. Quisque lacinia nunc sed enim eleifend posuere. Sed tempor vestibulum enim, tincidunt tristique ante. Suspendisse suscipit nisl a metus molestie, ac blandit erat tempor. Nullam quis metus massa. Fusce vitae iaculis eros. In sed diam erat. Curabitur velit leo, pulvinar eget lacinia a, elementum quis risus.</p>
+		</div>
+
+		<div>
+		<h1>This is paragraph 3</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt metus magna, malesuada elementum nisi fringilla a. Proin erat sapien, pretium at ipsum non, tincidunt cursus erat. Nam quis bibendum sapien, eget mollis turpis. Etiam ac sapien imperdiet, molestie justo sit amet, pharetra ligula. Fusce dignissim varius velit, sit amet congue nibh rutrum sed. Pellentesque et massa quam. Mauris viverra quis quam ullamcorper vehicula. Quisque lacinia nunc sed enim eleifend posuere. Sed tempor vestibulum enim, tincidunt tristique ante. Suspendisse suscipit nisl a metus molestie, ac blandit erat tempor. Nullam quis metus massa. Fusce vitae iaculis eros. In sed diam erat. Curabitur velit leo, pulvinar eget lacinia a, elementum quis risus.</p>
+		</div>
+	</div>
+
+	<div>
+	<h1>This is paragraph 4</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt metus magna, malesuada elementum nisi fringilla a. Proin erat sapien, pretium at ipsum non, tincidunt cursus erat. Nam quis bibendum sapien, eget mollis turpis. Etiam ac sapien imperdiet, molestie justo sit amet, pharetra ligula. Fusce dignissim varius velit, sit amet congue nibh rutrum sed. Pellentesque et massa quam. Mauris viverra quis quam ullamcorper vehicula. Quisque lacinia nunc sed enim eleifend posuere. Sed tempor vestibulum enim, tincidunt tristique ante. Suspendisse suscipit nisl a metus molestie, ac blandit erat tempor. Nullam quis metus massa. Fusce vitae iaculis eros. In sed diam erat. Curabitur velit leo, pulvinar eget lacinia a, elementum quis risus.</p>
+	</div>
+	<hr/>
+
+	<!-- /*<div style="margin-top: 1000px;"></div>*/ -->
+
+
+	<pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt metus magna, malesuada elementum nisi fringilla a. Proin erat sapien, pretium at ipsum non, tincidunt cursus erat. Nam quis bibendum sapien, eget mollis turpis. Etiam ac sapien imperdiet, molestie justo sit amet, pharetra ligula. Fusce dignissim varius velit, sit amet congue nibh rutrum sed. Pellentesque et massa quam. Mauris viverra quis quam ullamcorper vehicula. Quisque lacinia nunc sed enim eleifend posuere. Sed tempor vestibulum enim, tincidunt tristique ante. Suspendisse suscipit nisl a metus molestie, ac blandit erat tempor. Nullam quis metus massa. Fusce vitae iaculis eros. In sed diam erat. Curabitur velit leo, pulvinar eget lacinia a, elementum quis risus.</pre>
+
+	
+
+
+<script type="text/javascript">
+	// Window Object
+
+	// Alert
+	// window.alert('Hello World');
+
+	// Prompt
+	// const input = prompt('Write Something');
+	// console.log(input);
+
+	// Confirm
+	// if(confirm("Are u sure")){
+	// 	console.log('Yes, i want to delete');
+	// }else{
+	// 	console.log('Ohh sorry i don\'t');
+	// }
+
+	// Print
+
+		// window.print();
+		function printme() {
+			window.print();
+		}
+
+		let val;
+
+		val = window.outerWidth;
+		console.log('this is outer width = ' , val);
+		val = window.outerHeight;
+		console.log('this is outer height = ' , val);
+
+		val = window.innerWidth;
+		console.log('this is innerWidth width = ' , val);
+		val = window.innerHeight;
+		console.log('this is inner height = ' , val);
+
+		val = window.scrollY;
+		console.log('scroll Y values is ', val);
+
+		val = window.scrollX;
+		console.log('scroll X values is ', val);
+
+		//Redirect
+
+		// console.log(window);
+		// console.log(window.location);
+
+		// window.location.href = 'https://google.com';
+
+		// Reload
+		// window.location.reload();
+
+		function reloadme(){
+			// console.log('hii');
+			window.location.reload();
+		}
+
+		//Navigator Object
+		// console.log(window.navigator);
+		document.write('navigator.userAgent result = ', window.navigator.userAgent +'<br/>');
+		document.write('navigator.cookieEnabled result = ', window.navigator.cookieEnabled +'<br/>');
+		document.write('navigator.language result = ', window.navigator.language +'<br/>');
+		document.write('navigator.online result = ', window.navigator.onLine +'<br/>');
+				
+
+</script>
+</body>
+</html>
