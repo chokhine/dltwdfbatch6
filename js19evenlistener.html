@@ -38,6 +38,51 @@
 		</div>
 	</div>
 
+	<hr/>
+
+	<div>
+		<form action="" method="">
+
+			<label for="name">Name</label><br/>
+			<input type="text" name="name" id="name" class="" onchange="myfun()">
+			<br/><br/>
+
+			<label for="address">Address</label><br/>
+			<input type="text" name="address" id="address" class="">
+			<br/><br/>
+
+			<label for="gender">Gender</label>
+			<select name="gender" id="gender" class="" onchange="genderfun()"> 
+				<option disabled selected>Choose Gender</option>
+				<option value="1">Male</option>
+				<option value="0">Fmale</option>
+			</select>
+			<br/><br/>
+
+			<label for="country">Country</label>
+			<select name="country" id="country" onchange="countryfun()"> 
+				<option disabled selected>Choose Country</option>
+				<option value="mm">Myanmar</option>
+				<option value="th">Thailand</option>
+			</select>
+
+			<br/><br/>
+
+			<div id="mmcity">
+				<input type="radio" name="city" id="cityyng" class="" value="yangon"/><label>Yangon</label>
+				<input type="radio" name="city" id="citymdy" class="" value="mandalay"/><label>Mandalay</label>
+				<input type="radio" name="city" id="citybgo" class="" value="bago"/><label>Bago</label>
+			</div>
+
+			<div id="thcity">
+				<input type="radio" name="city" id="citybkk" class="" value="bangkok"/><label>Bangkok</label>
+				<input type="radio" name="city" id="citypkt" class="" value="phuket"/><label>Phuket</label>
+				<input type="radio" name="city" id="citymst" class="" value="maesot"/><label>Mae sot</label>
+			</div>
+
+		</form>	
+	</div>
+
 
 
 
@@ -104,6 +149,59 @@
 			document.getElementById('mm').style.textDecoration='underline';
 		});
 		
+		// for uppercase
+
+		function myfun(){
+			// console.log('kiki');
+
+			let txtname = document.getElementById('name')
+			// console.log(txtname.value);
+			txtname.value = txtname.value.toUpperCase();
+		
+		}
+
+		// for gender
+
+		function genderfun(){
+			// console.log("kiki");
+
+			let gnd = document.getElementById('gender');
+			// console.log(gnd.value);
+			// console.log(typeof gnd.value);
+
+			switch(gnd.value){
+				case "0":
+				window.alert('thz lady');
+				break;
+				case "1":
+				window.alert('thz bro');
+				break;
+			}
+		}
+
+		// for country
+
+		document.getElementById('mmcity').style.display="none";
+		document.getElementById('thcity').style.display="none";
+
+		function countryfun(){
+			// console.log("lolo");
+
+			let country = document.getElementById('country');
+			// console.log(country.value);
+			switch(country.value){
+
+				case 'mm':
+				document.getElementById('mmcity').style.display='block';
+				document.getElementById('thcity').style.display='none';
+				break;
+
+				case 'th':
+				document.getElementById('thcity').style.display='block';
+				document.getElementById('mmcity').style.display='none';
+				break;
+			}
+		}
 	</script>
 </body>
 </html>
