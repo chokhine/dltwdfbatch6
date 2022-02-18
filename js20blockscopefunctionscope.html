@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Block Scope and Function Scope</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// const name = "zaw zaw";
+	 // name = "kyaw Kyaw"; //error
+	 // const name = "aung aung" //error
+	 // console.log(name);
+
+
+	 // let name = 'yu yu';
+	 // name = 'mya mya';
+	 // let name = "hninn hninn" //error
+	 // console.log(name);
+
+	 // var name = "su su";
+	 // // name = "nu nu";
+	 // var name = "phyu phyu";
+	 // console.log(name);
+
+	 // ____________________________________________________
+
+	 //function
+
+	 //Global Scope
+	 var a = 1;
+	 let b = 2;
+	 const c =3;
+
+	 // a = 10;
+	 // b = 20;
+	 // c = 30; //error
+
+	 console.log('Global Scope = ',a,b,c);
+
+	 function myfunone(){
+	 	return a+b+c;
+	 }
+
+	 console.log('Using Global Scope variable in function ', myfunone());
+
+	 //overwrite
+
+	 function myfuntwo(){
+	 	a = 10;
+	 	b = 20;
+	 	// c = 30; /erroe can't overwrite cuz const
+
+	 	console.log('Overwrite / Global Scope variable in function ', a,b,c);
+	 }
+
+	 myfuntwo();
+	 console.log('Using Global Scope', a,b,c); //result 10 20 3;
+
+	 var x = 1;
+	 let y =2;
+	 const z =3;
+
+	 //Declare
+
+	 function myfunthree(){
+	 	var x = 4;
+	 	let y =5;
+	 	const z =6;
+
+	 	console.log('Declare / Global Scope variable in function ', x,y,z);
+
+	 	var h = 100;
+	 	let i = 200;
+	 	const j = 300;
+
+	 	console.log('h,i,j variable in function = ',h,i,j);
+	 }
+
+	 myfunthree();//result 4 5 6
+
+	 console.log('Global Scope = ',x,y,z); //result 1 2 3
+
+	 // console.log('h,i,j variable in function = ',h,i,j); //h,i,j is not defined
+
+	 // _________________________________________________
+
+	 // Statement
+
+	 var e =1;
+	 let f= 2;
+	 const g =3;
+	 console.log('global Scope = ',e,f,g);//result = 1,2,3
+
+	 // Use
+
+	 if(true){
+	 	console.log("If Statement / Global Scope variable in function = ",e,f,g);
+	 }
+
+	 // Overwrite
+	 if(true){
+	 	e = 10;
+	 	f =20;
+	 	// g = 30;//erroe . cuz of const
+	 	console.log("If Statement / Global Scope variable in function = ",e,f,g);
+	 }
+
+	 console.log("Global Scope variable in function = ",e,f,g); //result 10 20 3
+
+	 //Declare
+
+	 var m =1;
+	 let n = 2;
+	 const o = 3;
+
+	 if(true){
+	 	var m =4;
+	 	let n =5;
+	 	const o = 6;
+
+	 	console.log("Declare / Global Scope variable in If Statement = ",m,n,o);
+
+	 	var q = 100;
+	 	let r = 200;
+	 	const s = 300;
+
+	 	console.log('q,r,s variable in statement = ',q,r,s);
+	 }
+
+	 console.log("Global Scope = ", m,n,o); //result 4 2 3 (var value changed)
+
+	 console.log('q,r,s variable in statement = ', q); // r,s is not defined
+
+	 //----------------------------------------------------
+
+	 //Looping
+
+	 // result = 0 //error (cus of const cannot overwrite)
+	 // for(const x = 0; x<10; x++){
+	 // 	console.log(x);
+	 // }
+
+
+	 // for(let d = 0; d<10; d++){
+	 // 	console.log(d);
+	 // }
+		// console.log("d outside value is = ",d); // error d is not defined
+
+
+	 // for(var e = 0; e < 10; e++){
+	 // 	console.log(e);
+	 // }
+	 // console.log("e outside value is = ",e); //result = 10
+
+
+
+	 var num1 = 0;
+	 let num2 = 0;
+	 const num3 = 0;
+
+	 // for(num1;num1<10;num1++){
+	 // 	console.log('looping var num1 = ', num1);
+	 // }
+	 // console.log('Global Scope ', num1,num2,num3); //result 10 0 0
+
+	 // for(num2;num2<10;num2++){
+	 // 	console.log('looping let num3 = ', num2);
+	 // }
+	 // console.log('Global Scope ', num1,num2,num3); //result 0 10 0
+
+
+	 //result = 0 / error (cuz of const can't overwrite)
+	 // for(num3;num3<10;num3++){
+	 // 	console.log('looping const num3 = ', num3);
+	 // }
+	 // console.log('Global Scope ', num1,num2,num3); //result 10 0 0
+
+
+	 
+
+</script>
+</body>
+</html>
