@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Block Scope And Function Scope</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		// const name = "zaw zaw";
+		// name = "kyaw kyaw"; //error
+		// const name = "aung aung"; // error
+		// console.log(name);
+
+		// let name = "yu yu";
+		// name = "mya mya";
+		// let name = "hnin hnin"; //error
+		// console.log(name);
+
+		// var name = "su su";
+		// name = "nu nu";
+		// var name = "phyu phyu";
+		// console.log(name);
+
+// _________________________________________________________________
+
+		// Function
+
+		// Global Scope
+		var a = 1;
+		let b = 2;
+		const c = 3;
+
+		// a = 10;
+		// b = 20;
+		// c = 30; // error
+		console.log("Global Scope = ",a,b,c);
+
+		//use
+		function myfun1(){
+			return a+b+c;
+		}
+
+		console.log("Using Global Scope variable in function= " , myfun1()); //result = 6
+
+
+		//overwrite
+		function myfun2(){
+			a = 10;
+			b = 20;
+			// c = 30; //error can't overwrite cuz const
+
+			console.log("Overwrite / Global Scope variable in function = " , a,b,c);
+		}
+
+
+		myfun2();
+
+		console.log("Global Scope = ",a,b,c); //result = 10,20,3
+
+
+		var x = 1;
+		let y = 2;
+		const z = 3;
+
+
+		// Declare
+
+		function myfunthree(){
+			var x = 4;
+			let y = 5;
+			const z = 6;
+
+			console.log("Declare / Global Scope variable in function = ", x,y,z);
+
+			var h = 100;
+			let i = 200;
+			const j = 300;
+
+			console.log('h,i,j variable in function = ',h,i,j);
+		}
+
+		myfunthree(); //result 4 5 6
+
+		console.log("Global Scope = ",x,y,z); // result = 1 2 3
+
+		// console.log('h,i,j variable in function ' , h ,i ,j); //h,i,j is not defined
+
+// _________________________________________________________________
+
+	// Statement
+		var e = 1;
+		let f = 2;
+		const g = 3;
+
+		console.log("Global Scope = ", e,f,g); //result = 1 2 3
+
+		//Use 
+		if(true){
+			console.log("IF Statement / Global Scope variable in function = ", e,f,g);
+		}
+
+		// overwrite
+		if(true){
+			e = 10;
+			f = 20;
+			// g = 30; //error .cuz of const
+
+			console.log("IF Statement / Global Scope variable in function = ",e,f,g);
+		}
+
+		console.log("Global Scope = " ,e,f,g); // result = 10 20 3
+
+
+		//declare
+
+		var m = 1;
+		let n = 2;
+		const o = 3;
+
+		if(true){
+			var m = 4;
+			let n = 5;
+			const o = 6;
+
+			console.log("Declare / Global Scope variable in Statement = ",m,n,o);
+
+			var q = 100;
+			let r = 200;
+			const s = 300;
+
+			console.log('q,r,s variable in Statement = ',q,r,s);
+		}
+
+		console.log("Global Scope = ",m,n,o); //result = 4 2 3 (var value changed)
+
+		console.log('q,r,s variable in Statement = ',q); // r,s is not define
+
+
+// _________________________________________________________________
+
+	// loop
+	
+	// result = 0 /error (cuz const can't Overwrite)
+
+	// for(const x = 0; x , 10 ; x++){
+	// 	console.log(x);
+	// }
+
+	// for(let d = 0; d < 10 ; d++){
+	// 	console.log(d);
+	// }
+
+	// console.log("d outside value is = ", d); //error , d is not defined
+
+	// for(var e = 0;e < 10 ;e++){
+	// 	console.log(e);
+	// }
+
+	// console.log("e outside value is = ", e); //result = 10
+
+	var num1 = 0;
+	let num2 = 0;
+	const num3 = 0;
+
+	// for(num1 ; num1<10 ; num1++){
+	// 	console.log('looping var num1 = ',num1);
+	// }
+
+	// console.log("Global Scope ",num1,num2,num3); //result = 10 0 0
+
+	// for(num2 ; num2<10 ; num2++){
+	// 	console.log('looping var num2 = ',num2);
+	// }
+
+	// console.log("Global Scope ",num1,num2,num3); //result = 0 10 0
+
+	// result = 0 / error (cuz const can't overwrite)
+	// for(num3 ; num3<10 ; num3++){
+	// 	console.log('looping var num3 = ',num3);
+	// }
+
+	// console.log("Global Scope ",num1,num2,num3); //result = 10 0 0
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
+
+
+Global Scope
+=============
+Var
+-----
+var က reassign  လုပ်လို့ ရတယ်
+example 
+	   var x = 0;
+	    	x = 1;
+var က key နဲ့ လဲ reassign လုပ်လို့ ရတယ်
+example 
+		var x = 0;
+		var x = 1;
+____________________________________________________
+
+LET
+====
+let က reassign လုပ်လို့ ရတယ် key တော့ ပြန်ထည့် လို့ မရ ဘူး
+
+example 
+       can
+       let x = 0;
+           x = 1;
+        can't 
+        let x = 0;
+        let x = 1;
+
+____________________________________________________   
+
+Function && Global
+====================
+Var 
+---
+var က function မှာ reassgin  လုပ်လို့ ရတယ် key မလို ဘူး ပါလဲ ရတယ် 
+
+function ထဲ မှာ reassgin လုပ်ထားတဲ့ variable က global မှာ over write လုပ်တယ်
+
+example 
+		var x = 0;
+		function (){
+			 x  = 1;
+			 return x;
+  }
+  console.log(x);
+  **Ans = 1**
+
+function ထဲ မှာ  var နဲ့ ကြေညာ ထားတဲ့ variable က global မှာ ခေါ်သုံး လို့ မရဘူး
+example 
+function(){
+	var x = 0;
+}
+console.log(x);
+***Ans = error***
+
+let & const က လဲ var နဲ့ တူတူဘဲ
+
+____________________________________________________   
+
+Statement & Global 
+====================
+Let
+----
+let က statement ထဲမှာ reassgin လုပ်လို့ ရတယ် ရထားတဲ့ value ကလဲ global မှာ over write ဖြစ်
+
+example 
+		let x = 0;
+		    if(condition){
+		    	x=1;
+}
+console.log(x);
+ ***Ans = 1;***
+  statement ထဲ မှာ let & const သုံးပြီးကြေညာထားတဲ့  variable က အပြင်မှာခေါ်သုံးလို့ မရ
+  example 
+  		if(condition){
+  			let x = 0;
+  			const y = 0;
+
+  		}
+console.log(x,y);
+***Ans = error***
+
+ statement ထဲ မှာ var သုံးပြီးကြေညာထားတဲ့  variable က အပြင်မှာခေါ်သုံးလို့ ရတယ်
+  example 
+  		if(condition){
+  			var x = 0;
+
+  		}
+console.log(x);
+***Ans = 0***
+____________________________________________________   
+
+function & statement ထဲမှာ variable တွေ reassgin လုပ်လို့ ရတယ်
+
+reassgin လုပ်ထားတဲ့ variable က global က over write ဖြစ်တယ်
+
+function ထဲမှာvar let const သုံးပြီး ကြေညာထားတဲ့ variable တွေက global မှာခေါ်သုံးလို့ မရဘူး
+
+statement ထဲမှာ let const သုံးပြီး ကြေညာထားတဲ့ variable တွေက global မှာခေါ်သုံးလို့ မရဘူး
+var သုံးပြီးကြေညာထားရင် တော့ global မှာ သုံးလို့ ရတယ်
+
+____________________________________________________   
+
+Loop 
+------
+loop မှာ const သုံးလို့မရ ဘူး
+example 
+		for (const x = 0;x<5;x++){
+			console.log(x);
+			**Ans =x က 0 တော့ ထွက်မယ် ပြီးရင် error တက်မယ်**
+			
+			const က ပထမဆုံး တစ်ကြိမ်တော့ လုပ်လုပ်မယ်
+		}
+example of example  
+			const x = 0;
+			console.log(x);
+			** Ans = 0 **
+			x = 1 ;
+			console.log(x);
+			** Ans = error **
+			x = 2 ;
+			console.log(x);
+			** Ans = error **
+
+	
+
+loop ထဲမှာ var နဲ့ ကြေညာထားတဲ့ variable က အပြင်မှာခေါ်သုံးလို့ ရ
+example 
+		for (var x = 0;x<5;x++){
+			console.log(x); 
+		**Ans = 0,1,2,3,4**
+		}
+		console.log(x);
+		**Ans = 5**
+
+
+loop ထဲမှာ let နဲ့ ကြေညာထားတဲ့ variable က အပြင်မှာခေါ်သုံးလို့ မရ
+example 
+		for (let x = 0;x<5;x++){
+			console.log(x); 
+		**Ans = 0,1,2,3,4**
+		}
+		console.log(x);
+		**Ans = error**
+
+ဒါပေမယ့် global ထဲ မှာ နဂိုထဲက let & var နဲ့ ကြေညာခဲ့တဲ့ကောင်က loop ပြီးသွားရင် လဲ ခေါ်သုံးလို့ ရတယ်
+example 
+		let x = 0;
+		for (x ;x<5;x++){
+			console.log(x); 
+		**Ans = 0,1,2,3,4**
+		}
+		console.log(x);
+		**Ans = 5**
+
+
+
+
+
+
+
+
+
+
+
+
+

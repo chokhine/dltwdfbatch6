@@ -178,7 +178,164 @@
 	 // console.log('Global Scope ', num1,num2,num3); //result 10 0 0
 
 
+	 // Declare
+
+	 var num5 = 1;
+	 let num6 = 2;
+	 const num7 = 3;
+
+
+	 // for(var num5 = 0; num5<10;num5++){
+	 // 	console.log('forloop var num5 value = ',num5);
+	 // }
+	 // console.log('Global Scope ', num5,num6,num7); //result 10 2 3
+
+	 // for( let num6=0; num6<10;num6++){
+	 // 	console.log('forloop var num6 value = ',num6);
+	 // }
+	 // console.log('Global Scope ', num5,num6,num7); //result 1 2 3
+
+	 // result = 0/error (cuz const can't Overwrite)
+	 // for( const num7=0; num7<10;num7++){
+	 // 	console.log('forloop var num7 value = ',num7);
+	 // }
+	 // console.log('Global Scope ', num5,num6,num7);
+
+	 // ___________________________________________________
+
+	 // object
+
+	 var student = {
+	 	name:"aung tun tun",
+	 	age:16,
+	 	phone:"12345"
+	 }
+
+	 console.log(student);
+	 console.log(student.name,student.age,student.phone);
+
+	 //create
+	 student.city="mandalay";
+	 console.log(student);
+	 console.log(student.city);
+
+	 //overwrite
+	 student.age=20;
+	 console.log(student);
+	 console.log(student.age);
+
+	 student={
+	 	fullname:"ko ko"
+	 }
+	  console.log(student);
+	 console.log(student.fullname,student.age,student.phone);
+
+	 let member = {
+	 	fullname:'mya mya',
+	 	age:18,
+	 	phone:'123456'
+	 }
+	 console.log(member);
+	 console.log(member.fullname,member.age,member.phone);
+
+	 //create
+	 member.city="mandalay";
+	 console.log(member);
+	 console.log(member.city);
+
+	 //overwrite
+	 member.age=20;
+	 console.log(member);
+	 console.log(member.age);
+
+	 member={
+	 	fullname:"aye aye"
+	 }
+	  console.log(member);
+	  console.log(member.fullname,member.age,member.phone);
+
 	 
+	  const customer = {
+	 	fullname:'zayar kyaw',
+	 	age:30,
+	 	phone:'123456'
+	 }
+	 console.log(customer);
+	 console.log(customer.fullname,customer.age,customer.phone);
+
+	 //create
+	 customer.city="mandalay";
+	 console.log(customer);
+	 console.log(customer.city);
+
+	 //overwrite
+	 customer.age=40;
+	 console.log(customer);
+	 console.log(customer.age);
+
+	// error
+	 // customer={
+	 // 	fullname:"pu pu"
+	 // }
+	 //  console.log(customer);
+	 //  console.log(customer.fullname,customer.age,customer.phone);
+
+	 // ________________________________________________
+
+	 // Array
+
+	 var arrboys = ['aung aung','maung maung','kyaw kyaw'];
+	 console.log(arrboys);
+
+	 arrboys = ['naung naung','zaw zaw','naw naw'];
+	 console.log(arrboys);
+
+	 arrboys[0]='tun tun';
+	 console.log(arrboys);
+
+	 arrboys[3]='kaung kaung';
+	 console.log(arrboys);
+
+	 arrboys.push('thaung thaung');
+	 console.log(arrboys);
+
+
+
+	 let arrgirls = ['aye aye','chan chan','yu yu'];
+	 console.log(arrgirls);
+
+	 arrgirls = ['su su','nu nu','pu pu'];
+	 console.log(arrgirls);
+
+	 arrgirls[0]='htwe htwe';
+	 console.log(arrgirls);
+
+	 arrgirls[3]='swe swe';
+	 console.log(arrgirls);
+
+	 arrgirls.push('mya mya');
+	 console.log(arrgirls);
+
+	 const arrcolors = ['blue','black','brown'];
+	 console.log(arrcolors);
+
+	 // error
+	 // const arrcolors = ['red','green','orange'];
+	 // console.log(arrcolors);
+
+	 arrcolors[0]='white';
+	 console.log(arrcolors);
+
+	 arrcolors[3]='violet';
+	 console.log(arrcolors);
+
+	 arrcolors.push('gold');
+	 console.log(arrcolors);
+
+	 // ______________________________________
+
+	 // let and const are block scope
+	 // var are function scope
 
 </script>
 </body>
