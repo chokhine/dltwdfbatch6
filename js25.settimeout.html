@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Settimeout</title>
+</head>
+<body>
+	<div>
+		<h1 id="greeting">Welcome to our site</h1>
+	</div>
+
+	<hr/>
+
+	<div>
+		<button type="button" id="startalert" class="" onclick="startbtn()">Start Alert</button>
+		<button type="button" id="stopalert" class="" onclick="stopbtn()">Stop Alert</button>
+	</div>
+
+	<hr/>
+
+	<div>
+		<form action="" method="">
+			<input type="text" name="url" id="url" class=""/>
+			<input type="button" id="urlbtn" class="" value="Go Url" onclick="gourl()"/>
+			<input type="button" class="" value="Fav Url" onclick="favurl('https://linkedin.com')"/>
+		</form>
+	</div>
+	<hr/>
+	<div>
+		<img id="img1" class="" width="200px" height="200px" onmouseover="imgover()" onmouseout="imgout()" />
+	</div>
+	<hr/>
+
+	<div>
+		<img src="./img/icon/icon4.png" id="myimg" class="" alt="myimg" width="100">
+		<select name="size" id="size" class="" onchange="imgsize(this)">
+			<option selected disabled>Select</option>
+			<option value="50px">Small</option>
+			<option value="250px">Medium</option>
+			<option value="350px">Large</option>
+		</select>
+	</div>
+
+	<script type="text/javascript">
+		//For Greeting
+
+		// window.setInterval(newmessage,2000);
+
+		window.setTimeout(newmessage,3000);
+
+		function newmessage(){
+			document.getElementById("greeting").textContent = 'See you Later...';
+		}
+
+		//For Alert
+
+		function mypopup(){
+			window.alert("Welcome Sir...")
+		}
+
+		let mytimer;
+
+		function startbtn(){
+			// console.log('i am start');
+
+			mypopup();
+			
+			// window.setInterval(startbtn,2000);
+
+			mytimer = window.setTimeout(startbtn,2000);
+
+
+		}
+
+		function stopbtn(){
+			// console.log('i am stop');
+
+			window.clearInterval (mytimer);
+		}
+
+		//For URL
+
+		function gourl(){
+			// console.log('lll');
+			const geturl = document.getElementById("url").value;
+
+			window.location = "https://" + geturl;
+		}
+
+		function favurl(linkedin){
+			window.location = linkedin;
+		}
+
+		//Mouse Event
+
+		let getimg1 = document.getElementById('img1');
+
+		window.onload = function(){
+			getimg1.src = `img/icon/icon1.png`;
+		}
+
+		function imgover(){
+			getimg1.src = `img/icon/icon2.png`;
+		}
+
+		function imgout(){
+			getimg1.src = `img/icon/icon3.png`;
+		}
+
+		// For Image Size
+
+		function imgsize(th){
+			// let getsize = document.getElementById('size').value;
+			// console.log(getsize);
+
+			// console.log(th);
+			// console.log(th.value);
+
+			let getsize = th.value;
+			let getmyimg = document.getElementById('myimg');
+			// getmyimg.width = getsize;
+
+			console.log(getsize);
+			getmyimg.style.width = getsize;
+
+			// console.log(th.parentElement);
+
+				  //select  div
+			// console.log(th.parentElement.myimg);
+
+		}
+
+	</script>
+</body>
+</html>
